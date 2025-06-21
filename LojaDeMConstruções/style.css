@@ -1,0 +1,387 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+.header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens se quebrem em linhas menores */
+    padding: 10px 5%; /* Adiciona padding lateral para telas menores */
+}
+
+.header .logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    white-space: nowrap; /* Evita que o título quebre em várias linhas */
+}
+
+.header .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox para os itens do menu */
+}
+
+.header .nav-menu ul li {
+    margin-left: 20px;
+}
+
+.header .nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header .nav-menu ul li a:hover {
+    color: #ecf0f1;
+}
+
+.search-form-container {
+    margin-left: auto; /* Empurra o formulário para a direita */
+}
+
+.search-form {
+    display: flex;
+    gap: 5px;
+}
+
+.search-form input[type="search"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.search-form button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.search-form button:hover {
+    background: #2980b9;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px 5%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: #e74c3c;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-section .button {
+    display: inline-block;
+    background: #f1c40f;
+    color: #333;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.hero-section .button:hover {
+    background: #f39c12;
+}
+
+.about-us, .featured-products, .photo-album, .contact-section, .our-location {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+h2, h3, h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Product Grid (Flexbox) */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+.product-item {
+    flex: 1 1 calc(33% - 20px); /* 3 itens por linha com gap, ajustável para telas menores */
+    max-width: calc(33% - 20px);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Inclui padding e border no width */
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-item h4 {
+    margin: 10px 0;
+    color: #34495e;
+}
+
+.product-item p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-item span {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 1.1rem;
+}
+
+/* Photo Album (Flexbox) */
+.album-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaçamento menor para as fotos */
+    justify-content: center;
+}
+
+.album-grid img {
+    width: calc(20% - 10px); /* 5 fotos por linha com gap */
+    max-width: 250px; /* Largura máxima para cada imagem */
+    height: 180px; /* Altura fixa para manter o layout */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.album-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* Forms */
+.budget-form, .contact-form-footer {
+    background: #ecf0f1;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.budget-form label, .contact-form-footer label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.budget-form input[type="text"],
+.budget-form input[type="email"],
+.budget-form input[type="tel"],
+.budget-form select,
+.budget-form textarea,
+.contact-form-footer input[type="text"],
+.contact-form-footer input[type="email"],
+.contact-form-footer textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Inclui padding no width */
+}
+
+.budget-form textarea, .contact-form-footer textarea {
+    resize: vertical;
+}
+
+.budget-form button, .contact-form-footer button {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.budget-form button:hover, .contact-form-footer button:hover {
+    background: #229954;
+}
+
+/* Footer */
+.footer {
+    background: #34495e;
+    color: #fff;
+    padding: 30px 5%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start; /* Alinha o topo dos elementos */
+    gap: 20px; /* Espaço entre as colunas do footer */
+    margin-bottom: 20px;
+}
+
+.footer-content .contact-info,
+.footer-content .contact-form-footer {
+    flex: 1 1 45%; /* Duas colunas, ajustáveis para telas menores */
+    max-width: 45%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.footer-content .contact-info h4,
+.footer-content .contact-form-footer h4 {
+    color: #f1c40f;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.footer-content .contact-info p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.footer .copyright {
+    border-top: 1px solid #4a627a;
+    padding-top: 15px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .nav-menu {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .header .nav-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .header .nav-menu ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .search-form-container {
+        width: 100%;
+        margin-top: 15px;
+        margin-left: 0;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+
+    .search-form input[type="search"] {
+        flex-grow: 1;
+    }
+
+    .product-item {
+        flex: 1 1 calc(50% - 20px); /* 2 itens por linha em telas menores */
+        max-width: calc(50% - 20px);
+    }
+
+    .album-grid img {
+        width: calc(33.333% - 10px); /* 3 fotos por linha em telas menores */
+        height: 150px;
+    }
+
+    .footer-content .contact-info,
+    .footer-content .contact-form-footer {
+        flex: 1 1 100%; /* Uma coluna em telas muito pequenas */
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer-content .contact-info h4,
+    .footer-content .contact-form-footer h4 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .product-item {
+        flex: 1 1 100%; /* 1 item por linha em telas muito pequenas */
+        max-width: 100%;
+    }
+
+    .album-grid img {
+        width: calc(50% - 10px); /* 2 fotos por linha em telas muito pequenas */
+        height: 120px;
+    }
+}
